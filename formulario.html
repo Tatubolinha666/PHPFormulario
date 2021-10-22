@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Livraria Haku</title>
+	<link rel="shortcut icon" type="image" href="favicon.ico">
+<style >
+	body {
+
+		background-image: url("imagem.png");
+color: lightblue;
+font-family:  "Times New Roman", Times, serif;
+font-size: large;
+text-align: center;
+   
+</style>
+</head>
+<body>
+
+	<h1>Livraria Haku</h1>
+	<h2>  Cadastre-se para obter acesso a nossa coletânea 🤩</h2>
+
+<form name="cadastro"  method="get" action="cadastro.php">
+
+	
+<br>Nome completo:<input type="text" name="name" value=" "> </br>
+
+<br>E-mail:<input type="text" name="email" value=" "> </br>
+<br>Quer receber novidades de nossa loja em seu e-mail?
+<input type="radio" name="choice"
+<?php if (isset($choice) && $choice=="Sim") echo "checked";?>
+Sim
+<input type="radio" name="choice"
+<?php if (isset($choice) && $choice=="Não") echo "checked";?>
+Não</br>
+<br>Data de Nascimento:</br> <br> <input type="date" name="date" value="Data de Nascimento"></br>
+<br>Selecione a região de onde mora :</br>
+<select name="Região">
+	<option>  </option>
+<option> Norte </option>
+<option> Sul</option> 
+<option>Nordeste</option>
+<option>Sudeste</option>
+<option>Centro-Oeste</option>
+</select><br>
+
+<br>Gênero:</br>
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="Feminino") echo "checked";?>
+Feminino
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="Masculino") echo "checked";?>
+Masculino
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="Outro") echo "checked";?>
+Outro
+<br><br>Livro Favorito:</br></br><textarea name="comment" rows="5" cols="40"></textarea>
+    <br> Li e concordo com os termos de uso
+	<input type="checkbox" name="accept" value="checked"/></br><br>
+<input type="submit" name="Cadastrar">
+
+</form>
+</body>
+</html>
